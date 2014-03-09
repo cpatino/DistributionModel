@@ -1,5 +1,7 @@
 package co.com.carp.model.distribution.region;
 
+import java.util.Set;
+
 public class DistributionGroup extends DistributionModel {
     
     private Integer parentIdentifier; 
@@ -7,6 +9,10 @@ public class DistributionGroup extends DistributionModel {
     private String externalCode;
     
     private DistributionGroupType groupType;
+    
+    private Set<Client> client;
+    
+    private User user;
 
     /**
      * @return the parentIdentifier
@@ -101,4 +107,20 @@ public class DistributionGroup extends DistributionModel {
         return "DistributionGroup [parentIdentifier=" + parentIdentifier + ", externalCode=" + externalCode + ", groupType=" + groupType + ", toString()="
                 + super.toString() + "]";
     }
+
+	public Set<Client> getClient() {
+		return client;
+	}
+
+	public void setClient(Set<Client> client) {
+		this.client = client;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
 }
